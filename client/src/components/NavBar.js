@@ -9,13 +9,13 @@ export default function NavBar() {
         <img
           alt="profile"
           src={profile}
-          width="100"
+          width="80"
           height="auto"
           className="d-inline-block align-top rounded"
         />{" "}
       </Navbar.Brand>
       <div className="container">
-        <h1 className="header-title text-light ml-2">My Target Tracker</h1>
+        <h1 className="header-title text-light mx-2">My Target Tracker</h1>
         <Button className="btn btn-light">Login</Button>
       </div>
     </Navbar>
