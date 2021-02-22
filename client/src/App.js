@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import NavBar from "./components/NavBar";
+import FormDeneme from "./components/FormDeneme";
 import "./App.css";
 
 function App() {
@@ -12,9 +14,11 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <NavBar />
+      <div className="main">
         <p>{greeting ? greeting.message : "loading"}</p>
-      </header>
+        <FormDeneme />
+      </div>
     </div>
   );
 }
