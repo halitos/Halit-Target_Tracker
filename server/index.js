@@ -1,4 +1,5 @@
 const path = require("path");
+const db = require("./connection");
 const express = require("express");
 const app = express();
 const PORT = 3001;
@@ -7,6 +8,14 @@ app.get("/api", (req, res) => {
   res.json({
     message: "Hello there! Starting a new app for a long term targets",
   });
+});
+
+app.get("/student_email", function (req, res) {
+  db.query(`SELECT email FROM student`)
+    .then((result) => {
+      if (result) res.json(result.rows);
+    })
+    .catch((err) => res.status(500).json({ error: err }));
 });
 
 app.listen(PORT || process.env.PORT, function () {

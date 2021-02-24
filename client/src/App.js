@@ -5,6 +5,7 @@ import "./App.css";
 
 function App() {
   const [greeting, setGreeting] = useState("");
+  const [email, setEmail] = useState(null);
 
   useEffect(() => {
     fetch("/api")
@@ -12,11 +13,21 @@ function App() {
       .then((msg) => setGreeting(msg));
   }, []);
 
+  useEffect(() => {
+    fetch("/student_email")
+      .then((data) => data.json())
+      .then((data) => {
+        setEmail(data[0].email);
+        console.log(data);
+      });
+  }, []);
+
   return (
     <div className="App">
       <NavBar />
       <div className="main">
         <p>{greeting ? greeting.message : "loading"}</p>
+        <p>{email ? `email from mock DB : ${email}` : "loading"}</p>
         <FormDeneme />
       </div>
     </div>
