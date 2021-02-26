@@ -19,7 +19,11 @@ export default function NavBar() {
       </Navbar.Brand>
       <div className="container">
         <h1 className="header-title text-light mx-2">My Target Tracker</h1>
-        <Button className="btn btn-light">Login</Button>
+        <div className="link-box text-white">
+          <a href="#sign-in">Login</a>
+          <span className="separator mx-2">|</span>
+          <a href="#sign-up">Signup</a>{" "}
+        </div>
       </div>
     </Navbar>
   );

@@ -13,9 +13,29 @@
   padding-top: 2rem;
 }
 
+a {
+  color: rgb(255, 174, 0);
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(53, 223, 37);
+}
+
 @media (max-width: 600px) {
   .header-title {
     font-size: x-large;
     margin: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .link-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .separator {
+    display: none;
   }
 }

@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Form } from "react-bootstrap";
 
 export default function FormDeneme() {
   return (
     <>
       <div className="container d-flex justify-content-around align-items-center w-75 ">
-        <Link to="/">
-          <button className="btn btn-info h-50">Home</button>
-        </Link>
+        {/* <Link to="/">
+          <button className="btn btn-sm btn-info h-50">Home</button>
+        </Link> */}
         <h3 className="border border-light p-3 my-2 w-75">Selections</h3>
       </div>
       <Form className="w-75 mt-3">
