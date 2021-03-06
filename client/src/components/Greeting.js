@@ -22,8 +22,12 @@ export default function Greeting() {
 
   return (
     <div className="container">
-      <p>{greeting ? greeting.message : "loading"}</p>
-      <p>{email ? `email from mock DB : ${email}` : "loading"}</p>
+      <p>{greeting ? greeting.message : "loading... / no db connection"}</p>
+      <p>
+        {email
+          ? `email from mock DB : ${email}`
+          : "loading... / no db connection"}
+      </p>
       <Link to="/selections">
         <button className="btn-lg btn-info">Selection</button>
       </Link>
