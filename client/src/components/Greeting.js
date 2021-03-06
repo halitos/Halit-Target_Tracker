@@ -25,7 +25,7 @@ export default function Greeting() {
       <p>{greeting ? greeting.message : "loading"}</p>
       <p>{email ? `email from mock DB : ${email}` : "loading"}</p>
       <Link to="/selections">
-        <button className="btn-lg btn-info">See Selections</button>
+        <button className="btn-lg btn-info">Selection</button>
       </Link>
     </div>
   );

@@ -9,7 +9,7 @@ export default function FormDeneme() {
         {/* <Link to="/">
           <button className="btn btn-sm btn-info h-50">Home</button>
         </Link> */}
-        <h3 className="border border-light p-3 my-2 w-75">Selections</h3>
+        <h3 className="border border-light p-3 my-2 w-75">Selection</h3>
       </div>
       <Form className="w-75 mt-3">
         <Form.Group controlId="exampleForm.ControlInput1">
