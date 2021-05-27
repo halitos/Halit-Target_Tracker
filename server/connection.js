@@ -1,4 +1,5 @@
 const { Pool } = require("pg");
+require("dotenv").config();
 
 let pool;
 let db;
@@ -14,11 +15,11 @@ if (process.env.DATABASE_URL) {
   };
 } else {
   db = {
-    user: "44788",
-    host: "localhost",
-    database: "target_tracker",
-    password: "*****",
-    port: 5432,
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_DATABASE,
+    password: process.env.DB_HOST,
+    port: process.env.DB_PORT,
   };
 }
 
