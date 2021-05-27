@@ -15,7 +15,7 @@ export default function Greeting() {
     fetch("/student_email")
       .then((data) => data.json())
       .then((data) => {
-        setEmail(data[0].email);
+        setEmail(data[0]?.email);
         console.log(data);
       });
   }, []);
