@@ -15,9 +15,10 @@ export default function Greeting() {
     fetch("/student_email")
       .then((data) => data.json())
       .then((data) => {
-        setEmail(data[0]?.email);
         console.log(data);
-      });
+        setEmail(data[0]?.email);
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   return (
