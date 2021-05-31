@@ -2,8 +2,9 @@ import React from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import FormDeneme from "./components/FormDeneme";
+import FormDeneme from "./components/Dashboard";
 import Greeting from "./components/Greeting";
+import LoginPage from "./components/LoginPage";
 
 function App() {
   return (
@@ -14,7 +15,10 @@ function App() {
           <Route exact path="/">
             <Greeting />
           </Route>
-          <Route path="/selections">
+          <Route exact path="/login">
+            <LoginPage />
+          </Route>
+          <Route path="/dashboard">
             <FormDeneme />
           </Route>
         </Switch>

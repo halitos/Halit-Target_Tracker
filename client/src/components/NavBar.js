@@ -20,7 +20,9 @@ export default function NavBar() {
       <div className="container">
         <h1 className="header-title text-light mx-2">My Target Tracker</h1>
         <div className="link-box text-white">
-          <a href="#sign-in">Login</a>
+          <Link to="/login">
+            <a href="#sign-in">Login</a>
+          </Link>
           <span className="separator mx-2">|</span>
           <a href="#sign-up">Signup</a>{" "}
         </div>
